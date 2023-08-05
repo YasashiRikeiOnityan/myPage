@@ -1,12 +1,12 @@
 <template> 
-  <About /> 
+  <Activation /> 
 </template> 
 
 <script> 
-  import About from '../components/fst-about' 
+  import Activation from '../components/my-activation' 
   export default { 
     components: { 
-      About 
+      Activation 
     } 
   } 
 </script> 

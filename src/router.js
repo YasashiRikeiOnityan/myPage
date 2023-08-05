@@ -1,8 +1,9 @@
 import Vue from 'vue'; 
 import Router from 'vue-router'; 
 import Home from './views/fst-home.vue'; 
-import About from './views/fst-about.vue'; 
+import Activation from './views/my-activation.vue'; 
 import Intro from './views/intro-test.vue';
+import StudyEntranceExam from './views/study-entrance-exam.vue';
 
 Vue.use(Router); 
 
@@ -14,14 +15,19 @@ export default new Router({
       component: Home,
     },
     { 
-      path: '/fst-sabout', 
-      name: 'about', 
-      component: About, 
+      path: '/my-activation', 
+      name: 'activarion', 
+      component: Activation, 
     },
     { 
         path: '/intro-test', 
         name: 'intro', 
         component: Intro, 
-    }, 
+    },
+    { 
+        path: '/study-entrance-exam', 
+        name: 'study-entrance-exam', 
+        component: StudyEntranceExam, 
+    },
   ] 
 });

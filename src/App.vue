@@ -5,12 +5,15 @@
             <v-list nav dense>
                 <v-list-item-group>
                     <v-list-item>
+                        <v-list-item-icon><v-icon>mdi-home-outline</v-icon></v-list-item-icon>
                         <v-list-item-title @click="onHome">HOME</v-list-item-title>
                     </v-list-item>
                     <v-list-item>
-                        <v-list-item-title @click="onAbout">ABOUT</v-list-item-title>
+                        <v-list-item-icon><v-icon>mdi-apps</v-icon></v-list-item-icon>
+                        <v-list-item-title @click="onActivation">ACTIVATION</v-list-item-title>
                     </v-list-item>
                     <v-list-item>
+                        <v-list-item-icon><v-icon>mdi-account-outline</v-icon></v-list-item-icon>
                         <v-list-item-title @click="onIntro">INTRO</v-list-item-title>
                     </v-list-item>
                 </v-list-item-group>
@@ -20,7 +23,7 @@
         <v-app-bar app>
             <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
             <v-toolbar-title>
-                Sample Vue Project
+                Sample Vue Application
             </v-toolbar-title> 
         </v-app-bar>
 
@@ -51,7 +54,7 @@
         components: {
         },
         data: () => ({
-            drawer: false,
+            drawer: true,
         }),
         methods: {
             onHome () {
@@ -59,9 +62,9 @@
                     this.$router.push({ path: '/' });
                 }
             }, 
-            onAbout () {
-                if(this.$route.path != '/fst-about'){
-                    this.$router.push({ path: '/fst-about' });
+            onActivation () {
+                if(this.$route.path != '/my-activation'){
+                    this.$router.push({ path: '/my-activation' });
                 }
             }, 
             onIntro () {

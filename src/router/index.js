@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/fst-home.vue'
+import Activation from '../views/my-activation.vue'
 import Intro from '../views/intro-test.vue'
+import StudyEntranceExam from '../views/studay-entrance-exam.vue'
 
 Vue.use(VueRouter)
 
@@ -12,17 +14,20 @@ const routes = [
     component: Home
   },
   {
-    path: '/fst-about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/fst-about.vue')
+    path: '/my-activation',
+    name: 'activation',
+    component: Activation
   },
   {
     path: '/intro-test',
     name: 'intro',
     component: Intro
+  }
+  ,
+  {
+    path: '/studay-entrance-exam',
+    name: 'studay-entrance-exam',
+    component: StudyEntranceExam
   }
 ]
 
