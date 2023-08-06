@@ -42,9 +42,14 @@
         </v-card-title>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" text @click="dialog1 = false">閉じる<v-icon>mdi-close-box-outline</v-icon></v-btn>
-          <v-btn color="primary" text >ダウンロード<v-icon>mdi-file-download-outline</v-icon></v-btn>
-          <v-btn color="primary" text >ブラウザで開く<v-icon>mdi-open-in-app</v-icon></v-btn>
+          <v-btn color="primary" text @click="dialog1=false;selectedItem=false">閉じる<v-icon>mdi-close-box-outline</v-icon></v-btn>
+          <v-btn color="primary" text>ダウンロード<v-icon>mdi-file-download-outline</v-icon></v-btn>
+          <v-btn 
+            color="primary" 
+            text
+            @click="openPDF();dialog1=false;selectedItem=false"
+            target="_blank"
+          >ブラウザで開く<v-icon>mdi-open-in-app</v-icon></v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -65,8 +70,8 @@
       }
     },
     methods: {
-      openPage () {
-        window.open('./2023_tokyo.pdf');
+      openPDF () {
+        window.open("./2023_tokyo.pdf");
       },
       openDialog12 (i) {
         if (i == 0) {

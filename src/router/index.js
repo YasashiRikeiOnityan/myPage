@@ -22,8 +22,7 @@ const routes = [
     path: '/intro-test',
     name: 'intro',
     component: Intro
-  }
-  ,
+  },
   {
     path: '/studay-entrance-exam',
     name: 'studay-entrance-exam',
