@@ -1,4 +1,5 @@
 <template>
+  <!--
   <v-card class="mx-auto" max-width="434" tile elevation="5">
     <v-img height="100%" src="../../public/programmer.jpg">
       <v-row align="end" class="fill-height">
@@ -19,4 +20,27 @@
       </v-row>
     </v-img>
   </v-card>
+  -->
+  <v-container>
+    <v-row>
+    <v-col cols="3">
+  <v-alert
+      dense
+      text
+      type="success"
+    >
+      I'm a dense alert with the <strong>text</strong> prop and a <strong>type</strong> of success
+    </v-alert>
+  </v-col>
+  <v-col cols="6">
+  <v-alert
+      dense
+      text
+      type="success"
+    >
+      I'm a dense alert with the <strong>text</strong> prop and a <strong>type</strong> of success
+    </v-alert>
+  </v-col>
+</v-row>
+  </v-container>
 </template>
