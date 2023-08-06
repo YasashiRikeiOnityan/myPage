@@ -43,6 +43,21 @@
           </v-card>
         </v-hover>
       </v-col>
+    
+    <v-col cols="3">
+        <v-hover v-slot="{ hover }">
+          <v-card :class="{ 'on-hover': hover }" :elevation="hover ? 10 : 5" min-height="200">
+            <v-card-title>Comming Soon</v-card-title>
+            <v-card-text>
+              Comming Soon
+            </v-card-text>
+            <v-card-actions class="mt-auto">
+              <v-spacer></v-spacer>
+              <v-btn text absolute bottom right>Comming Soon</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-hover>
+      </v-col>
     </v-row>
   </v-container>
 </template>

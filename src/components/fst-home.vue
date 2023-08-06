@@ -20,27 +20,115 @@
       </v-row>
     </v-img>
   </v-card>
-  -->
-  <v-container>
-    <v-row>
-    <v-col cols="3">
-  <v-alert
-      dense
-      text
-      type="success"
+-->
+
+<v-container>
+  <v-stepper
+    v-model="e6"
+    vertical
+  >
+    <v-stepper-step
+      :complete="e6 > 1"
+      step="1"
     >
-      I'm a dense alert with the <strong>text</strong> prop and a <strong>type</strong> of success
-    </v-alert>
-  </v-col>
-  <v-col cols="6">
-  <v-alert
-      dense
-      text
-      type="success"
+      Select an app
+      <small>Summarize if needed</small>
+    </v-stepper-step>
+
+    <v-stepper-content step="1">
+      <v-card
+        color="grey lighten-1"
+        class="mb-12"
+        height="200px"
+      ></v-card>
+      <v-btn
+        color="primary"
+        @click="e6 = 2"
+      >
+        Continue
+      </v-btn>
+      <v-btn text>
+        Cancel
+      </v-btn>
+    </v-stepper-content>
+
+    <v-stepper-step
+      :complete="e6 > 2"
+      step="2"
     >
-      I'm a dense alert with the <strong>text</strong> prop and a <strong>type</strong> of success
-    </v-alert>
-  </v-col>
-</v-row>
-  </v-container>
-</template>
+      Configure analytics for this app
+    </v-stepper-step>
+
+    <v-stepper-content step="2">
+      <v-card
+        color="grey lighten-1"
+        class="mb-12"
+        height="200px"
+      ></v-card>
+      <v-btn
+        color="primary"
+        @click="e6 = 3"
+      >
+        Continue
+      </v-btn>
+      <v-btn text>
+        Cancel
+      </v-btn>
+    </v-stepper-content>
+
+    <v-stepper-step
+      :complete="e6 > 3"
+      step="3"
+    >
+      Select an ad format and name ad unit
+    </v-stepper-step>
+
+    <v-stepper-content step="3">
+      <v-card
+        color="grey lighten-1"
+        class="mb-12"
+        height="200px"
+      ></v-card>
+      <v-btn
+        color="primary"
+        @click="e6 = 4"
+      >
+        Continue
+      </v-btn>
+      <v-btn text>
+        Cancel
+      </v-btn>
+    </v-stepper-content>
+
+    <v-stepper-step step="4">
+      View setup instructions
+    </v-stepper-step>
+    <v-stepper-content step="4">
+      <v-card
+        color="grey lighten-1"
+        class="mb-12"
+        height="200px"
+      ></v-card>
+      <v-btn
+        color="primary"
+        @click="e6 = 1"
+      >
+        Continue
+      </v-btn>
+      <v-btn text>
+        Cancel
+      </v-btn>
+    </v-stepper-content>
+  </v-stepper>
+</v-container>
+  </template>
+
+<script>
+export default {
+  data () {
+    return {
+      e6: true,
+    }
+  },
+}
+</script>
