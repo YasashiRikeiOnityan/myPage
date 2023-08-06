@@ -7,7 +7,7 @@
             <v-list-item dark>
                 <v-list-item-content>
                     <v-list-item-title class="text-h6">
-                        やさしい理系お兄ちゃん
+                        自分にい理系お兄ちゃん
                     </v-list-item-title>
                     <v-list-item-subtitle>
                         Security Engineer
